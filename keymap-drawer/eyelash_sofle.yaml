@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   LAYER0:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -14,7 +14,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab$$
+  - $$mdi:apple-keyboard-caps$$
   - Q
   - W
   - E
@@ -27,7 +27,7 @@ layers:
   - O
   - {t: ;, s: ':'}
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - COPY
   - PASTE
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - layer1
   - {t: '$$mdi:backspace$$', h: LGUI}
   - $$mdi:keyboard-space$$
   - PLAY PAUSE
@@ -121,7 +121,7 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
