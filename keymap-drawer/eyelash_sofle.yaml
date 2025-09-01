@@ -43,7 +43,7 @@ layers:
   - '&keyboard_layout'
   - Z
   - X
-  - {t: C, h: AltGr+C}
+  - {t: C, h: 'AltGr+,'}
   - V
   - B
   - $$mdi:skip-next$$
