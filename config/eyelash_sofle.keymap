@@ -17,7 +17,7 @@
 &mt {
     tapping-term-ms = <150>;
     flavor = "balanced";
-    quick-tap-ms = <150>;
+    quick-tap-ms = <250>;
 };
 
 &msc {
@@ -32,7 +32,7 @@
     trigger-period-ms = <16>;
 };
 
-&soft_off { hold-time-ms = <2000>; };
+&soft_off { hold-time-ms = <1000>; };
 
 / {
     scroll_encoder: scroll_encoder {
