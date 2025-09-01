@@ -69,11 +69,11 @@
 
         layer0 {
             bindings = <
-&kp ESC           &kp N1          &kp N2          &kp N3            &kp N4         &kp N5       &kp UP_ARROW      &kp N6     &kp N7       &kp N8        &kp N9           &kp N0           &kp DEL
-&kp TAB           &kp Q           &kp W           &kp E             &kp R          &kp T        &kp DOWN_ARROW    &kp Y      &kp U        &kp I         &kp O            &kp SEMI         &kp BSLH
-&kp CAPS          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G        &kp C_PREVIOUS    &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &mt RGUI P       &kp APOS
-&keyboard_layout  &kp Z           &kp X           &kp C             &kp V          &kp B        &kp C_NEXT        &kp N      &kp M        &kp COMMA     &kp DOT          &kp FSLH         &kp DOUBLE_QUOTES
-&kp C_MUTE        &kp K_COPY      &kp K_PASTE     &kp LGUI          &kp BACKSPACE  &kp SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &kp ESCAPE   &mo 2         &none            &kp PRINTSCREEN
+&kp ESC           &kp N1          &kp N2          &kp N3            &kp N4              &kp N5       &kp UP_ARROW      &kp N6     &kp N7       &kp N8        &kp N9           &kp N0           &kp DEL
+&kp TAB           &kp Q           &kp W           &kp E             &kp R               &kp T        &kp DOWN_ARROW    &kp Y      &kp U        &kp I         &kp O            &kp SEMI         &kp BSLH
+&kp CAPS          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F         &kp G        &kp C_PREVIOUS    &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &mt RGUI P       &kp APOS
+&keyboard_layout  &kp Z           &kp X           &kp C             &kp V               &kp B        &kp C_NEXT        &kp N      &kp M        &kp COMMA     &kp DOT          &kp FSLH         &kp DOUBLE_QUOTES
+&kp C_MUTE        &kp K_COPY      &kp K_PASTE     &mo 1             &mt LGUI BACKSPACE  &kp SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &kp ESCAPE   &mo 2         &none            &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
