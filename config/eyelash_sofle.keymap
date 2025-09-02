@@ -82,11 +82,11 @@
 
         symbols {
             bindings = <
-&trans  &trans         &trans         &trans         &trans        &trans          &trans  &trans    &trans        &trans        &trans        &trans      &trans
-&trans  &kp LS(PLUS)   &kp MINUS      &kp LS(PRCNT)  &kp FSLH      &kp LS(PIPE)    &trans  &kp LBKT  &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(STAR)  &trans      &trans
-&trans  &kp LS(CARET)  &kp EQUAL      &kp LS(COLON)  &kp LS(DLLR)  &kp SEMI        &trans  &kp RBKT  &kp LS(LPAR)  &kp LS(LBRC)  &kp LS(LT)    &kp LS(GT)  &trans
-&trans  &trans         &kp LS(UNDER)  &kp LS(POUND)  &kp LS(AT)    &trans          &trans  &trans    &kp LS(AMPS)  &kp LS(EXCL)  &kp LS(PIPE)  &trans      &trans
-&trans  &trans         &trans         &trans         &trans        &trans          &trans  &trans    &trans        &trans        &trans        &trans
+&trans  &trans         &trans         &trans         &trans        &trans          &trans  &trans             &trans        &trans        &trans        &trans      &trans
+&trans  &kp LS(PLUS)   &kp MINUS      &kp LS(PRCNT)  &kp FSLH      &kp LS(PIPE)    &trans  &kp RIGHT_BRACKET  &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(STAR)  &trans      &trans
+&trans  &kp LS(CARET)  &kp EQUAL      &kp LS(COLON)  &kp LS(DLLR)  &kp SEMI        &trans  &kp LEFT_BRACKET   &kp LS(LPAR)  &kp LS(LBRC)  &kp LS(LT)    &kp LS(GT)  &trans
+&trans  &trans         &kp LS(UNDER)  &kp LS(POUND)  &kp LS(AT)    &trans          &trans  &trans             &kp LS(AMPS)  &kp LS(EXCL)  &kp LS(PIPE)  &trans      &trans
+&trans  &trans         &trans         &trans         &trans        &trans          &trans  &trans             &trans        &trans        &trans        &trans
             >;
         };
 
