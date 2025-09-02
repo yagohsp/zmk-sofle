@@ -86,7 +86,7 @@ layers:
   - {t: /, s: '?'}
   - Sft+|
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - Sft+)
   - Sft+}
   - Sft+*
@@ -99,7 +99,7 @@ layers:
   - Sft+$
   - {t: ;, s: ':'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: ']', s: '}'}
+  - {t: '[', s: '{'}
   - Sft+(
   - Sft+{
   - Sft+<
