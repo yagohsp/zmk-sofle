@@ -33,7 +33,7 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
-  - PREVIOUS
+  - $$mdi:arrow-left-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
@@ -46,7 +46,7 @@ layers:
   - {t: C, h: 'AltGr+,'}
   - V
   - B
-  - $$mdi:skip-next$$
+  - $$mdi:arrow-right-bold$$
   - N
   - M
   - {t: ',', s: <}
@@ -72,7 +72,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+REWIND
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -98,7 +98,7 @@ layers:
   - 'Sft+:'
   - Sft+$
   - {t: ;, s: ':'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PREVIOUS
   - {t: '[', s: '{'}
   - Sft+(
   - Sft+{
@@ -111,7 +111,7 @@ layers:
   - Sft+#
   - Sft+@
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+&
   - Sft+!
@@ -124,7 +124,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PLAY PAUSE
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
