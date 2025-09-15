@@ -84,7 +84,7 @@ layers:
   - {t: '-', s: _}
   - Sft+%
   - {t: /, s: '?'}
-  - Sft+|
+  - {t: Sft+\, s: Sft+|}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ']', s: '}'}
   - Sft+)
