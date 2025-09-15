@@ -137,7 +137,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
+         display-name = "layer4";
             sensor-bindings = <&scroll_encoder>;
         };
     };
