@@ -111,7 +111,7 @@
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
-
+            display-name = "layer2";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -123,6 +123,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N0  &kp N1  &kp N2  &kp N3  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+           display-name = "layer3";
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
