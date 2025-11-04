@@ -82,11 +82,11 @@
 
         symbols {
             bindings = <
-&trans  &trans         &trans         &trans         &trans        &trans               &kp RS(C_REWIND)  &trans             &trans        &trans        &trans        &trans      &trans
-&trans  &kp LS(PLUS)   &kp MINUS      &kp LS(PRCNT)  &kp FSLH      &kp LS(BACKSLASH)    &trans            &kp RIGHT_BRACKET  &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(STAR)  &trans      &trans
-&trans  &kp LS(CARET)  &kp EQUAL      &kp LS(COLON)  &kp LS(DLLR)  &kp SEMI             &kp C_PREVIOUS    &kp LEFT_BRACKET   &kp LS(LPAR)  &kp LS(LBRC)  &kp LS(LT)    &kp LS(GT)  &trans
-&trans  &trans         &kp LS(UNDER)  &kp LS(POUND)  &kp LS(AT)    &trans               &kp C_NEXT        &trans             &kp LS(AMPS)  &kp LS(EXCL)  &kp LS(PIPE)  &trans      &trans
-&trans  &trans         &trans         &trans         &trans        &trans               &kp C_PLAY_PAUSE  &trans             &trans        &trans        &trans        &trans
+&trans  &trans         &trans         &trans         &trans        &trans           &kp RS(C_REWIND)  &trans             &trans        &trans        &trans        &trans      &trans
+&trans  &kp LS(PLUS)   &kp MINUS      &kp LS(PRCNT)  &kp FSLH      &kp BACKSLASH    &trans            &kp RIGHT_BRACKET  &kp LS(RPAR)  &kp LS(RBRC)  &kp LS(STAR)  &trans      &trans
+&trans  &kp LS(CARET)  &kp EQUAL      &kp LS(COLON)  &kp LS(DLLR)  &kp SEMI         &kp C_PREVIOUS    &kp LEFT_BRACKET   &kp LS(LPAR)  &kp LS(LBRC)  &kp LS(LT)    &kp LS(GT)  &trans
+&trans  &trans         &kp LS(UNDER)  &kp LS(POUND)  &kp LS(AT)    &trans           &kp C_NEXT        &trans             &kp LS(AMPS)  &kp LS(EXCL)  &kp LS(PIPE)  &trans      &trans
+&trans  &trans         &trans         &trans         &trans        &trans           &kp C_PLAY_PAUSE  &trans             &trans        &trans        &trans        &trans
             >;
         };
 
