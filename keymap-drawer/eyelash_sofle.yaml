@@ -25,7 +25,7 @@ layers:
   - U
   - I
   - O
-  - '~'
+  - P
   - {t: '`', s: '~'}
   - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
@@ -38,7 +38,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: P, h: RGUI}
+  - {t: ;, h: RGUI, s: ':'}
   - {t: '''', s: '"'}
   - '&keyboard_layout'
   - Z
@@ -62,8 +62,8 @@ layers:
   - PLAY PAUSE
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-esc$$', h: symbols}
+  - '~'
   - bluetooth
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PRINTSCREEN
   symbols:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -257,8 +257,8 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   numbers:
   - {t: '$$mdi:transfer$$', type: trans}
