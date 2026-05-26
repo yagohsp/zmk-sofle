@@ -56,14 +56,14 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - layer1
+  - LAYER1
   - {t: '$$mdi:backspace$$', h: LGUI}
-  - {t: '$$mdi:keyboard-space$$', h: numbers}
+  - {t: '$$mdi:keyboard-space$$', h: LAYER3}
   - PLAY PAUSE
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-esc$$', h: symbols}
   - '~'
-  - bluetooth
+  - LAYER2
   - PRINTSCREEN
   symbols:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -130,7 +130,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  layer1:
+  LAYER1:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  bluetooth:
+  LAYER2:
   - '~'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -260,7 +260,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  numbers:
+  LAYER3:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
