@@ -75,7 +75,7 @@
 &kp C_MUTE        &trans          &trans          &mo 2             &mt LGUI BACKSPACE  &lt 2 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 1 ESCAPE  &kp TILDE     &mo 3            &kp PRINTSCREEN
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             display-name = "LAYER0";
         };
 
