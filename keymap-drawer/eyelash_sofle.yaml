@@ -159,9 +159,9 @@ layers:
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '0', s: )}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '4'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '5'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '6'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
