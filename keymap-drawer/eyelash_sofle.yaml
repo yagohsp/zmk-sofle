@@ -279,7 +279,7 @@ layers:
   - ^
   - $
   - '%'
-  - '"'
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - '*'
   - )
@@ -292,7 +292,7 @@ layers:
   - ':'
   - {t: '=', s: +}
   - {t: /, s: '?'}
-  - {t: '''', s: '"'}
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ;, s: ':'}
   - (
