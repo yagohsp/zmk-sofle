@@ -44,6 +44,7 @@
 
     behaviors {
         // TD(0): tap = C, double-tap = M5 — 150 ms tapping term (VIL tap_dance[0])
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -63,6 +64,7 @@
 
     macros {
         // M0: KC_APPLICATION + LSFT(KC_GRAVE) = K_APP then ~
+
         m0: m0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -71,6 +73,7 @@
         };
 
         // M1: KC_APPLICATION + KC_QUOTE = K_APP then '
+
         m1: m1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -79,6 +82,7 @@
         };
 
         // M2: KC_APPLICATION + LSFT(KC_6) = K_APP then ^
+
         m2: m2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -87,6 +91,7 @@
         };
 
         // M3: DF(0) + TO(0) — ZMK macro uses &to only (&df unavailable in macros)
+
         m3: m3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -95,6 +100,7 @@
         };
 
         // M4: DF(2) + TO(2) — ZMK macro uses &to only (&df unavailable in macros)
+
         m4: m4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -103,6 +109,7 @@
         };
 
         // M5: KC_APPLICATION + KC_COMMA + KC_C (used in TD(0) double-tap)
+
         m5: m5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -111,6 +118,7 @@
         };
 
         // Original ZMK layout-switcher macro (kept, not used in any layer)
+
         keyboard_layout: keyboard_layout {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -127,13 +135,14 @@
         // R-ext row1: PSCRN | row2: M1 (K_APP+') | row3: M2 (K_APP+^)
         // R pos11 row1: M0 (K_APP+~) | row2: P | row3: ?
         // C key (row3 pos3): TD0 — tap=C / double=M5
+
         qwerty {
             bindings = <
-&trans    &trans   &trans          &trans            &trans               &trans         &trans  &trans     &trans        &trans        &trans           &trans     &trans
-&m4       &kp Q    &kp W           &kp E             &kp R                &kp T          &trans  &kp Y      &kp U         &kp I         &kp O            &m0        &kp PSCRN
-&kp TAB   &kp A    &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F          &kp G          &trans  &kp H      &mt RCTRL J   &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &m1
-&kp CAPS  &kp Z    &kp X           &td0              &kp V                &kp B          &trans  &kp N      &kp M         &kp COMMA     &kp DOT          &kp QMARK  &m2
-&kp C_MUTE  &kp K_APP  &mo 6      &trans            &mt LGUI BSPC        &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC  &mo 5  &trans  &trans
+&trans      &trans     &trans          &trans            &trans         &trans         &kp UP            &trans     &trans       &trans        &trans           &trans     &trans
+&m4         &kp Q      &kp W           &kp E             &kp R          &kp T          &kp DOWN          &kp Y      &kp U        &kp I         &kp O            &m0        &kp PSCRN
+&kp TAB     &kp A      &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G          &kp LEFT          &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &m1
+&kp CAPS    &kp Z      &kp X           &td0              &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &kp COMMA     &kp DOT          &kp QMARK  &m2
+&kp C_MUTE  &kp K_APP  &mo 6           &trans            &mt LGUI BSPC  &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC    &mo 5         &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -141,13 +150,14 @@
         };
 
         // Layer 1 — Colemak (no mods)
+
         colemak {
             bindings = <
-&trans    &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans      &trans     &trans   &trans    &trans
-&trans    &kp Q    &kp W    &kp F    &kp P    &kp B    &trans  &kp J    &kp L       &kp U      &kp Y    &kp SEMI  &trans
-&kp TAB   &kp A    &kp R    &kp S    &kp T    &kp G    &trans  &kp M    &kp N       &kp E      &kp I    &kp O     &trans
-&kp CAPS  &kp Z    &kp X    &kp C    &kp D    &kp V    &trans  &kp K    &kp H       &kp COMMA  &kp DOT  &kp FSLH  &trans
-&trans    &trans   &trans   &trans   &mt LGUI BSPC     &lt 3 SPACE  &trans  &kp ENTER  &lt 4 ESC  &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans         &trans         &trans  &trans     &trans     &trans     &trans   &trans    &trans
+&trans    &kp Q   &kp W   &kp F   &kp P          &kp B          &trans  &kp J      &kp L      &kp U      &kp Y    &kp SEMI  &trans
+&kp TAB   &kp A   &kp R   &kp S   &kp T          &kp G          &trans  &kp M      &kp N      &kp E      &kp I    &kp O     &trans
+&kp CAPS  &kp Z   &kp X   &kp C   &kp D          &kp V          &trans  &kp K      &kp H      &kp COMMA  &kp DOT  &kp FSLH  &trans
+&trans    &trans  &trans  &trans  &mt LGUI BSPC  &lt 3 SPACE    &trans  &kp ENTER  &lt 4 ESC  &trans     &trans   &trans
             >;
 
             display-name = "COLEMAK";
@@ -157,13 +167,14 @@
         // L-ext row1: M3 (DF+TO QWERTY)
         // R-ext row1: PSCRN
         // C key (row3 pos3): TD0 — tap=C / double=M5
+
         colemak_hrm {
             bindings = <
-&trans    &trans   &trans          &trans            &trans               &trans         &trans  &trans   &trans          &trans          &trans           &trans    &trans
-&m3       &kp Q    &kp W           &kp F             &kp P                &kp B          &trans  &kp J    &kp L           &kp U           &kp Y            &kp SEMI  &kp PSCRN
-&kp TAB   &kp A    &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T          &kp G          &trans  &kp M    &mt RCTRL N     &mt RSHIFT E    &mt RIGHT_ALT I  &kp O     &trans
-&kp CAPS  &kp Z    &kp X           &td0              &kp D                &kp V          &trans  &kp K    &kp H           &kp COMMA       &kp DOT          &kp FSLH  &trans
-&kp C_MUTE  &trans     &mo 6      &trans            &mt LGUI BSPC        &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC  &mo 5  &trans  &trans
+&trans      &trans  &trans          &trans            &trans         &trans         &trans            &trans     &trans       &trans        &trans           &trans    &trans
+&m3         &kp Q   &kp W           &kp F             &kp P          &kp B          &trans            &kp J      &kp L        &kp U         &kp Y            &kp SEMI  &kp PSCRN
+&kp TAB     &kp A   &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T    &kp G          &trans            &kp M      &mt RCTRL N  &mt RSHIFT E  &mt RIGHT_ALT I  &kp O     &trans
+&kp CAPS    &kp Z   &kp X           &td0              &kp D          &kp V          &trans            &kp K      &kp H        &kp COMMA     &kp DOT          &kp FSLH  &trans
+&kp C_MUTE  &trans  &mo 6           &trans            &mt LGUI BSPC  &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC    &mo 5         &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -172,13 +183,14 @@
 
         // Layer 3 — Numbers / Navigation
         // Left: numpad 0 col + 7-9 / [LAlt]4-[LCtl]6 / 1-3 | Right: arrow cluster
+
         numbers {
             bindings = <
-&trans  &trans    &trans           &trans             &trans               &trans        &trans  &trans     &trans     &trans   &trans     &trans  &trans
-&trans  &kp N0    &kp N7           &kp N8             &kp N9               &trans        &trans  &trans     &trans     &trans   &trans     &trans  &trans
-&trans  &kp N0    &mt LEFT_ALT N4  &mt LEFT_SHIFT N5  &mt LCTRL N6         &trans        &trans  &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &trans  &trans
-&trans  &kp N0    &kp N1           &kp N2             &kp N3               &trans        &trans  &trans     &trans     &trans   &trans     &trans  &trans
-&trans  &trans    &trans           &trans             &mt LGUI BSPC        &lt 3 SPACE   &trans  &kp ENTER  &lt 4 ESC  &trans   &trans     &trans
+&trans  &trans  &trans           &trans             &trans         &trans         &trans  &trans     &trans     &trans  &trans     &trans  &trans
+&trans  &kp N0  &kp N7           &kp N8             &kp N9         &trans         &trans  &trans     &trans     &trans  &trans     &trans  &trans
+&trans  &kp N0  &mt LEFT_ALT N4  &mt LEFT_SHIFT N5  &mt LCTRL N6   &trans         &trans  &kp LEFT   &kp DOWN   &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp N0  &kp N1           &kp N2             &kp N3         &trans         &trans  &trans     &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans           &trans             &mt LGUI BSPC  &lt 3 SPACE    &trans  &kp ENTER  &lt 4 ESC  &trans  &trans     &trans
             >;
 
             display-name = "NUMBERS";
@@ -187,13 +199,14 @@
         // Layer 4 — Symbols
         // Left:  ~ ^ $ % "  /  ! : = / '  /  @ # _ - `
         // Right: * ) } ] >  /  ; ( { [ <  /  \ & | +
+
         symbols {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans     &trans  &trans     &trans     &trans     &trans     &trans   &trans
-&trans  &kp TILDE  &kp CARET  &kp DLLR   &kp PRCNT  &kp DQT    &trans  &kp STAR   &kp RPAR   &kp RBRC   &kp RBKT   &kp GT   &trans
-&trans  &kp EXCL   &kp COLON  &kp EQUAL  &kp FSLH   &kp SQT    &trans  &kp SEMI   &kp LPAR   &kp LBRC   &kp LBKT   &kp LT   &trans
-&trans  &kp AT     &kp HASH   &kp UNDER  &kp MINUS  &kp GRAVE  &trans  &kp BSLH   &kp AMPS   &kp PIPE   &kp PLUS   &trans   &trans
-&trans  &trans     &trans     &trans     &mt LGUI BSPC  &lt 3 SPACE  &trans  &kp ENTER  &lt 4 ESC  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans         &trans         &trans  &trans     &trans     &trans    &trans    &trans  &trans
+&trans  &kp TILDE  &kp CARET  &kp DLLR   &kp PRCNT      &kp DQT        &trans  &kp STAR   &kp RPAR   &kp RBRC  &kp RBKT  &kp GT  &trans
+&trans  &kp EXCL   &kp COLON  &kp EQUAL  &kp FSLH       &kp SQT        &trans  &kp SEMI   &kp LPAR   &kp LBRC  &kp LBKT  &kp LT  &trans
+&trans  &kp AT     &kp HASH   &kp UNDER  &kp MINUS      &kp GRAVE      &trans  &kp BSLH   &kp AMPS   &kp PIPE  &kp PLUS  &trans  &trans
+&trans  &trans     &trans     &trans     &mt LGUI BSPC  &lt 3 SPACE    &trans  &kp ENTER  &lt 4 ESC  &trans    &trans    &trans
             >;
 
             display-name = "SYMBOLS";
@@ -201,19 +214,21 @@
 
         // Layer 5 — Functions
         // Left only: F7-F10 / [LAlt]F4-[LCtl]F6 F11 / F1-F3 F12
+
         functions {
             bindings = <
-&trans  &trans  &trans           &trans             &trans               &trans       &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &kp F7           &kp F8             &kp F9               &kp F10      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mt LEFT_ALT F4  &mt LEFT_SHIFT F5  &mt LCTRL F6         &kp F11      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &kp F1           &kp F2             &kp F3               &kp F12      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans           &trans             &mt LGUI BSPC        &lt 3 SPACE  &trans  &kp ENTER  &lt 4 ESC  &trans  &trans  &trans
+&trans  &trans  &trans           &trans             &trans         &trans         &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &kp F7           &kp F8             &kp F9         &kp F10        &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mt LEFT_ALT F4  &mt LEFT_SHIFT F5  &mt LCTRL F6   &kp F11        &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1           &kp F2             &kp F3         &kp F12        &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans             &mt LGUI BSPC  &lt 3 SPACE    &trans  &kp ENTER  &lt 4 ESC  &trans  &trans  &trans
             >;
 
             display-name = "FUNCTIONS";
         };
 
         // Layer 6 — Bluetooth / ZMK utility (hold MO6 on left thumb in layers 0 & 2)
+
         bluetooth {
             bindings = <
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans       &trans
