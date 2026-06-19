@@ -86,19 +86,19 @@
             label = "M2";
         };
 
-        // M3: DF(0) + TO(0) = set default layer to QWERTY and switch to it
+        // M3: DF(0) + TO(0) — ZMK macro uses &to only (&df unavailable in macros)
         m3: m3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&df 0 &to 0>;
+            bindings = <&to 0>;
             label = "M3";
         };
 
-        // M4: DF(2) + TO(2) = set default layer to Colemak+HRM and switch to it
+        // M4: DF(2) + TO(2) — ZMK macro uses &to only (&df unavailable in macros)
         m4: m4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&df 2 &to 2>;
+            bindings = <&to 2>;
             label = "M4";
         };
 
