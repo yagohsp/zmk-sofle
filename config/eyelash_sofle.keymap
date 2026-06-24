@@ -91,39 +91,15 @@
         };
 
         // M3: DF(0) + TO(0) — ZMK macro uses &to only (&df unavailable in macros)
+        // M4: DF(2) + TO(2) — ZMK macro uses &to only (&df unavailable in macros)
+        // M5: KC_APPLICATION + KC_COMMA + KC_C (used in TD(0) double-tap)
+        // Original ZMK layout-switcher macro (kept, not used in any layer)
 
         m3: m3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0>;
-            label = "M3";
-        };
-
-        // M4: DF(2) + TO(2) — ZMK macro uses &to only (&df unavailable in macros)
-
-        m4: m4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 2>;
-            label = "M4";
-        };
-
-        // M5: KC_APPLICATION + KC_COMMA + KC_C (used in TD(0) double-tap)
-
-        m5: m5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
             bindings = <&kp K_APP &kp COMMA &kp C>;
-            label = "M5";
-        };
-
-        // Original ZMK layout-switcher macro (kept, not used in any layer)
-
-        keyboard_layout: keyboard_layout {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI &kp COMMA &kt LGUI>;
-            label = "KEYBOARD_LAYOUT";
+            label = "M3";
         };
     };
 
@@ -139,9 +115,9 @@
         qwerty {
             bindings = <
 &trans      &trans     &trans          &trans            &trans         &trans         &kp UP            &trans     &trans       &trans        &trans           &trans     &trans
-&m4         &kp Q      &kp W           &kp E             &kp R          &kp T          &kp DOWN          &kp Y      &kp U        &kp I         &kp O            &m0        &kp PSCRN
+&to 2       &kp Q      &kp W           &kp E             &kp R          &kp T          &kp DOWN          &kp Y      &kp U        &kp I         &kp O            &m0        &kp PSCRN
 &kp TAB     &kp A      &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G          &kp LEFT          &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &m1
-&kp CAPS    &kp Z      &kp X           &td0              &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &kp COMMA     &kp DOT          &kp QMARK  &m2
+&kp CAPS    &kp Z      &kp X           &kp C             &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &kp COMMA     &kp DOT          &kp QMARK  &m2
 &kp C_MUTE  &kp K_APP  &mo 6           &trans            &mt LGUI BSPC  &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC    &mo 5         &trans           &trans
             >;
 
@@ -171,7 +147,7 @@
         colemak_hrm {
             bindings = <
 &trans      &trans  &trans          &trans            &trans         &trans         &trans            &trans     &trans       &trans        &trans           &trans    &trans
-&m3         &kp Q   &kp W           &kp F             &kp P          &kp B          &trans            &kp J      &kp L        &kp U         &kp Y            &kp SEMI  &kp PSCRN
+&to 0       &kp Q   &kp W           &kp F             &kp P          &kp B          &trans            &kp J      &kp L        &kp U         &kp Y            &kp SEMI  &kp PSCRN
 &kp TAB     &kp A   &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T    &kp G          &trans            &kp M      &mt RCTRL N  &mt RSHIFT E  &mt RIGHT_ALT I  &kp O     &trans
 &kp CAPS    &kp Z   &kp X           &td0              &kp D          &kp V          &trans            &kp K      &kp H        &kp COMMA     &kp DOT          &kp FSLH  &trans
 &kp C_MUTE  &trans  &mo 6           &trans            &mt LGUI BSPC  &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC    &mo 5         &trans           &trans
