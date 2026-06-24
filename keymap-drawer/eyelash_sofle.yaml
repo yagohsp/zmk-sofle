@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   QWERTY:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -13,7 +13,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
   - {t: COLMK-HRM, h: toggle}
   - Q
   - W
@@ -25,8 +25,8 @@ layers:
   - U
   - I
   - O
-  - '&m0'
-  - $$mdi:printer-outline$$
+  - {t: '`', s: '~'}
+  - {t: ., s: '>'}
   - $$mdi:keyboard-tab$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - P
-  - '&m1'
+  - {t: ',', s: <}
   - $$mdi:apple-keyboard-caps$$
   - Z
   - X
@@ -49,14 +49,14 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - '~'
+  - {t: '''', s: '"'}
   - '?'
-  - '&m2'
+  - '"'
   - $$mdi:volume-off$$
-  - APP
-  - BT
   - {t: '$$mdi:transfer$$', type: trans}
+  - BT
+  - APP
   - {t: '$$mdi:backspace$$', h: LGUI}
   - {t: '$$mdi:keyboard-space$$', h: NUMBERS}
   - PLAY PAUSE
