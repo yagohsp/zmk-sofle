@@ -14,7 +14,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&m4'
+  - {t: COLMK-HRM, h: toggle}
   - Q
   - W
   - E
@@ -43,7 +43,7 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - Z
   - X
-  - '&td0'
+  - C
   - V
   - B
   - $$mdi:arrow-right-bold$$
@@ -144,7 +144,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&m3'
+  - {t: QWERTY, h: toggle}
   - Q
   - W
   - F
