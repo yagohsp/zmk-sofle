@@ -95,11 +95,11 @@
         // M5: KC_APPLICATION + KC_COMMA + KC_C (used in TD(0) double-tap)
         // Original ZMK layout-switcher macro (kept, not used in any layer)
 
-        m3: m3 {
+        m5: m5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_APP &kp COMMA &kp C>;
-            label = "M3";
+            label = "M5";
         };
     };
 
