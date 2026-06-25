@@ -95,11 +95,11 @@
         // M5: KC_APPLICATION + KC_COMMA + KC_C (used in TD(0) double-tap)
         // Original ZMK layout-switcher macro (kept, not used in any layer)
 
-        m3: m3 {
+        m5: m5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_APP &kp COMMA &kp C>;
-            label = "M3";
+            label = "M5";
         };
     };
 
@@ -178,11 +178,11 @@
 
         symbols {
             bindings = <
-&trans  &trans     &trans     &trans          &trans         &trans               &trans  &trans     &trans     &trans    &trans    &trans  &trans
-&trans  &kp TILDE  &kp CARET  &kp DLLR        &kp PERCENT    &kp SQT              &trans  &kp STAR   &kp RPAR   &kp RBRC  &kp RBKT  &kp GT  &trans
-&trans  &kp EXCL   &kp COLON  &kp EQUAL       &kp SLASH      &kp DOUBLE_QUOTES    &trans  &kp SEMI   &kp LPAR   &kp LBRC  &kp LBKT  &kp LT  &trans
-&trans  &kp AT     &kp HASH   &kp UNDERSCORE  &kp MINUS      &kp GRAVE            &trans  &kp BSLH   &kp AMPS   &kp PIPE  &kp PLUS  &trans  &trans
-&trans  &trans     &trans     &trans          &mt LGUI BSPC  &lt 3 SPACE          &trans  &kp ENTER  &lt 4 ESC  &trans    &trans    &trans
+&trans  &trans     &trans     &trans          &trans         &trans         &trans  &trans     &trans     &trans    &trans    &trans  &trans
+&trans  &kp TILDE  &kp CARET  &kp DLLR        &kp PERCENT    &trans         &trans  &kp STAR   &kp RPAR   &kp RBRC  &kp RBKT  &kp GT  &trans
+&trans  &kp EXCL   &kp COLON  &kp EQUAL       &kp SLASH      &kp DOT        &trans  &kp SEMI   &kp LPAR   &kp LBRC  &kp LBKT  &kp LT  &trans
+&trans  &kp AT     &kp HASH   &kp UNDERSCORE  &kp MINUS      &trans         &trans  &kp BSLH   &kp AMPS   &kp PIPE  &kp PLUS  &trans  &trans
+&trans  &trans     &trans     &trans          &mt LGUI BSPC  &lt 3 SPACE    &trans  &kp ENTER  &lt 4 ESC  &trans    &trans    &trans
             >;
 
             display-name = "SYMBOLS";
