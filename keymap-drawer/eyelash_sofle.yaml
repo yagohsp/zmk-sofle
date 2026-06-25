@@ -26,7 +26,7 @@ layers:
   - I
   - O
   - {t: '`', s: '~'}
-  - {t: ',', s: <}
+  - {t: ., s: '>'}
   - $$mdi:keyboard-tab$$
   - A
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - P
-  - {t: ., s: '>'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-caps$$
   - Z
   - X
@@ -49,8 +49,8 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
+  - {t: ',', s: <}
   - '~'
-  - {t: '''', s: '"'}
   - '?'
   - '"'
   - $$mdi:volume-off$$
