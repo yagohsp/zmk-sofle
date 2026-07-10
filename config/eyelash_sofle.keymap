@@ -51,6 +51,30 @@
             tapping-term-ms = <150>;
             bindings = <&kp C>, <&m5>;
         };
+
+        // TD(1): tap = ~, double-tap = K_APP then ~
+        td_tilde: td_tilde {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp TILDE>, <&m0>;
+        };
+
+        // TD(2): tap = ', double-tap = K_APP then '
+        td_quote: td_quote {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp SINGLE_QUOTE>, <&m1>;
+        };
+
+        // TD(3): tap = ,, double-tap = K_APP then , then c
+        td_comma: td_comma {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp COMMA>, <&m5>;
+        };
     };
 
     combos {
@@ -108,16 +132,17 @@
 
         // Layer 0 — QWERTY + home row mods
         // L-ext row1: M4 (DF+TO Colemak+HRM)
-        // R-ext row1: PSCRN | row2: M1 (K_APP+') | row3: M2 (K_APP+^)
-        // R pos11 row1: M0 (K_APP+~) | row2: P | row3: ?
+        // R-ext row1: PSCRN | row2: TD2 (tap=' / double=K_APP+') | row3: ?
+        // R pos11 row1: ` | row2: P | row3: TD1 (tap=~ / double=K_APP+~)
+        // R row3: TD3 (tap=, / double=K_APP+,+c)
         // C key (row3 pos3): TD0 — tap=C / double=M5
 
         qwerty {
             bindings = <
 &kp PRINTSCREEN  &trans  &trans          &trans            &trans         &trans         &kp UP            &trans     &trans       &trans        &trans           &trans     &kp DELETE
 &to 2            &kp Q   &kp W           &kp E             &kp R          &kp T          &kp DOWN          &kp Y      &kp U        &kp I         &kp O            &kp GRAVE  &kp DOT
-&kp TAB          &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G          &kp LEFT          &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &kp SINGLE_QUOTE
-&kp CAPS         &kp Z   &kp X           &kp C             &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &kp COMMA     &kp TILDE        &kp QMARK  &kp DOUBLE_QUOTES
+&kp TAB          &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G          &kp LEFT          &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &td_quote
+&kp CAPS         &kp Z   &kp X           &kp C             &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &td_comma     &td_tilde        &kp QMARK  &kp DOUBLE_QUOTES
 &kp C_MUTE       &trans  &mo 6           &kp K_APP         &mt LGUI BSPC  &lt 3 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 4 ESC    &mo 5         &trans           &trans
             >;
 
