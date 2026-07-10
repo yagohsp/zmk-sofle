@@ -39,7 +39,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - P
-  - {t: '''', s: '"'}
+  - '&td_quote'
   - $$mdi:apple-keyboard-caps$$
   - Z
   - X
@@ -49,8 +49,8 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - '~'
+  - '&td_comma'
+  - '&td_tilde'
   - '?'
   - '"'
   - $$mdi:volume-off$$
