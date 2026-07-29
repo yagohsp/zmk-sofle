@@ -48,32 +48,22 @@
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp C>, <&m5>;
         };
 
-        // TD(1): tap = ~, double-tap = K_APP then ~
         td_tilde: td_tilde {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp TILDE>, <&m0>;
+            tapping-term-ms = <250>;
+            bindings = <&m0>, <&m_tilde_slash>;
         };
 
-        // TD(2): tap = ', double-tap = K_APP then '
-        td_quote: td_quote {
+        td_dot: td_dot {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp SINGLE_QUOTE>, <&m1>;
-        };
-
-        // TD(3): tap = ,, double-tap = K_APP then , then c
-        td_comma: td_comma {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp COMMA>, <&m5>;
+            tapping-term-ms = <250>;
+            bindings = <&kp DOT>, <&m_dot_slash>;
         };
     };
 
@@ -120,22 +110,35 @@
             bindings = <&kp K_APP &kp GRAVE>;
             label = "M_GRAVE";
         };
+
+        m_tilde_slash: m_tilde_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp FSLH>;
+            label = "M_TILDE_SLASH";
+        };
+
+        m_dot_slash: m_dot_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp FSLH>;
+            label = "M_DOT_SLASH";
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        // Layer 0 — QWERTY + home row mods
-        // Hold Enter → layer 6 (Portuguese accents); tap Enter unchanged
-        // R-ext row2: td_quote | row2: ` (GRAVE) | row3: td_tilde | row3: C
+        // Layer 0 — QWERTY + home row mods (Portuguese text)
+        // Compose: m_grave, m1, td_tilde (tap m0 / double ~/), td_dot (tap . / double ./)
 
         qwerty {
             bindings = <
 &kp PRINTSCREEN  &trans  &trans          &trans            &trans         &trans         &kp UP            &trans     &trans       &trans        &trans           &trans     &kp DELETE
-&to 1            &kp Q   &kp W           &kp E             &kp R          &kp T          &kp DOWN          &kp Y      &kp U        &kp I         &kp O            &kp GRAVE  &kp DOT
-&kp TAB          &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G          &kp LEFT          &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &td_quote
-&kp CAPS         &kp Z   &kp X           &kp C             &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &td_comma     &td_tilde        &kp QMARK  &kp DOUBLE_QUOTES
-&kp C_MUTE       &trans  &mo 5           &kp K_APP         &mt LGUI BSPC  &lt 2 SPACE    &kp C_PLAY_PAUSE  &lt 6 ENTER  &lt 3 ESC    &mo 4         &trans           &trans
+&to 1            &kp Q   &kp W           &kp E             &kp R          &kp T          &kp DOWN          &kp Y      &kp U        &kp I         &kp O            &m_grave   &td_dot
+&kp TAB          &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F    &kp G          &kp LEFT          &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RIGHT_ALT L  &kp P      &m1
+&kp CAPS         &kp Z   &kp X           &td0              &kp V          &kp B          &kp RIGHT         &kp N      &kp M        &kp COMMA     &td_tilde        &kp QMARK  &kp EXCL
+&kp C_MUTE       &trans  &mo 5           &kp K_APP         &mt LGUI BSPC  &lt 2 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 3 ESC    &mo 4         &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -150,7 +153,7 @@
 &to 0       &kp Q   &kp W           &kp F             &kp P          &kp B          &trans            &kp J      &kp L        &kp U         &kp Y            &kp SEMI  &kp PSCRN
 &kp TAB     &kp A   &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T    &kp G          &trans            &kp M      &mt RCTRL N  &mt RSHIFT E  &mt RIGHT_ALT I  &kp O     &trans
 &kp CAPS    &kp Z   &kp X           &td0              &kp D          &kp V          &trans            &kp K      &kp H        &kp COMMA     &kp DOT          &kp FSLH  &trans
-&kp C_MUTE  &trans  &mo 5           &trans            &mt LGUI BSPC  &lt 2 SPACE    &kp C_PLAY_PAUSE  &lt 6 ENTER  &lt 3 ESC    &mo 4         &trans           &trans
+&kp C_MUTE  &trans  &mo 5           &trans            &mt LGUI BSPC  &lt 2 SPACE    &kp C_PLAY_PAUSE  &kp ENTER  &lt 3 ESC    &mo 4         &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -172,16 +175,17 @@
             display-name = "NUMBERS";
         };
 
-        // Layer 3 — Symbols
-        // Left:  ~ ^ $ % "  /  ! : = / '  /  @ # _ - `
-        // Right: * ) } ] >  /  ; ( { [ <  /  \ & | +
+        // Layer 3 — Code / terminal / Neovim (hold Esc on base layers)
+        // Row1: { [ (  |  ) ] } * >
+        // Row2: + - = / %  |  @ # $ _ \
+        // Row3: : ; " ' `  |  | & < >
 
         symbols {
             bindings = <
 &trans  &trans    &trans     &trans          &trans         &trans         &trans  &trans     &trans     &trans    &trans    &trans  &trans
-&trans  &trans    &kp CARET  &kp DLLR        &kp PERCENT    &trans         &trans  &kp STAR   &kp RPAR   &kp RBRC  &kp RBKT  &kp GT  &trans
-&trans  &kp EXCL  &kp COLON  &kp EQUAL       &kp SLASH      &kp DOT        &trans  &kp SEMI   &kp LPAR   &kp LBRC  &kp LBKT  &kp LT  &trans
-&trans  &kp AT    &kp HASH   &kp UNDERSCORE  &kp MINUS      &kp PLUS       &trans  &kp BSLH   &kp AMPS   &kp PIPE  &kp PLUS  &trans  &trans
+&trans  &trans    &kp LBRC   &kp LBKT        &kp LPAR       &trans         &trans  &kp RPAR   &kp RBKT   &kp RBRC  &kp STAR  &kp GT  &trans
+&trans  &kp PLUS  &kp MINUS  &kp EQUAL       &kp SLASH      &kp PERCENT    &trans  &kp AT     &kp HASH   &kp DLLR  &kp UNDER &kp BSLH &trans
+&trans  &kp COLON &kp SEMI   &kp DQT         &kp SQT        &kp GRAVE      &trans  &kp PIPE   &kp AMPS   &kp LT    &kp GT    &trans  &trans
 &trans  &trans    &trans     &trans          &mt LGUI BSPC  &lt 2 SPACE    &trans  &kp ENTER  &lt 3 ESC  &trans    &trans    &trans
             >;
 
@@ -216,21 +220,6 @@
 
             display-name = "BT";
             sensor-bindings = <&scroll_encoder>;
-        };
-
-        // Layer 6 — Portuguese accents (hold Enter on QWERTY / Colemak-HRM)
-        // Same positions as layer 0: GRAVE, td_quote, C, td_tilde → K_APP macros
-
-        accents {
-            bindings = <
-&trans  &trans  &trans          &trans            &trans         &trans         &trans            &trans     &trans       &trans        &trans           &trans     &trans
-&trans  &trans  &trans          &trans            &trans         &trans         &trans            &trans     &trans       &trans        &trans           &m_grave   &trans
-&trans  &trans  &trans          &trans            &trans         &trans         &trans            &trans     &trans       &trans        &trans           &trans     &m1
-&trans  &trans  &trans          &m5               &trans         &trans         &trans            &trans     &trans       &trans        &m0              &trans     &trans
-&trans  &trans  &trans          &trans            &trans         &trans         &trans            &lt 6 ENTER  &trans       &trans        &trans           &trans
-            >;
-
-            display-name = "ACCENTS";
         };
     };
 };
