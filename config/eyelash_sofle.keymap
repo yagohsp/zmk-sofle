@@ -182,11 +182,11 @@
 
         symbols {
             bindings = <
-&trans  &trans    &trans     &trans          &trans         &trans         &trans  &trans     &trans     &trans    &trans    &trans  &trans
-&trans  &trans    &kp LBRC   &kp LBKT        &kp LPAR       &trans         &trans  &kp RPAR   &kp RBKT   &kp RBRC  &kp STAR  &kp GT  &trans
-&trans  &kp PLUS  &kp MINUS  &kp EQUAL       &kp SLASH      &kp PERCENT    &trans  &kp AT     &kp HASH   &kp DLLR  &kp UNDER &kp BSLH &trans
-&trans  &kp COLON &kp SEMI   &kp DQT         &kp SQT        &kp GRAVE      &trans  &kp PIPE   &kp AMPS   &kp LT    &kp GT    &trans  &trans
-&trans  &trans    &trans     &trans          &mt LGUI BSPC  &lt 2 SPACE    &trans  &kp ENTER  &lt 3 ESC  &trans    &trans    &trans
+&trans  &trans     &trans            &trans          &trans         &trans         &trans  &trans     &trans                 &trans    &trans             &trans    &trans
+&trans  &trans     &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LPAR       &trans         &trans  &trans     &kp RIGHT_PARENTHESIS  &kp RBRC  &kp RIGHT_BRACKET  &kp STAR  &trans
+&trans  &kp PLUS   &kp MINUS         &kp EQUAL       &kp SLASH      &kp PERCENT    &trans  &kp AT     &kp HASH               &kp DLLR  &kp UNDER          &kp BSLH  &trans
+&trans  &kp COLON  &kp SEMI          &kp DQT         &kp SQT        &kp GRAVE      &trans  &kp PIPE   &kp AMPS               &kp LT    &kp GT             &trans    &trans
+&trans  &trans     &trans            &trans          &mt LGUI BSPC  &lt 2 SPACE    &trans  &kp ENTER  &lt 3 ESC              &trans    &trans             &trans
             >;
 
             display-name = "SYMBOLS";
