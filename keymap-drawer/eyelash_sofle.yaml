@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - '&td_dot'
   - '?'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&m_caret'
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - BT
@@ -221,7 +221,7 @@ layers:
   - '}'
   - {t: ']', s: '}'}
   - '*'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - ^
   - {t: '$$mdi:transfer$$', type: trans}
   - +
   - {t: '-', s: _}
