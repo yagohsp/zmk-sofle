@@ -43,7 +43,7 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - Z
   - X
-  - '&td0'
+  - C
   - V
   - B
   - $$mdi:arrow-right-bold$$
@@ -108,7 +108,7 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - Z
   - X
-  - '&td0'
+  - C
   - D
   - V
   - {t: '$$mdi:transfer$$', type: trans}
