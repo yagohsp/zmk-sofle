@@ -50,7 +50,7 @@ layers:
   - N
   - M
   - {t: ',', s: <}
-  - '&td_dot'
+  - {t: ., s: '>'}
   - '?'
   - '&m_caret'
   - $$mdi:volume-off$$
@@ -242,9 +242,9 @@ layers:
   - _
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '|'
-  - '&'
   - '!'
+  - '&'
+  - '|'
   - <
   - '>'
   - {t: '$$mdi:transfer$$', type: trans}
